@@ -1,0 +1,2563 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Page</title>
+         <meta charset="UTF-8">
+            <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+        <meta name="description" content="CSS Shape and creatures and manymore.">
+        <meta name="viewport" content="width=device-width , initial-scale=1, user-scalable = 0 ">
+        <link rel="stylesheet" href=
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+        </link>
+        <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+   html,body{
+    background-image: linear-gradient(to top right,black,rgb(1, 20, 41),rgb(4, 1, 32), rgb(1, 20, 41),black);
+            scrollbar-width: none;
+            width: 100%;
+            height: 100%;    
+        }
+
+#body{
+  position: fixed;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.center{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.placeholder{
+    position: absolute;
+    top: 2.4%;
+    left: 41%;
+    color: white;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+    animation-name: opacityslide;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+
+@keyframes opacityslide{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.searchbar:focus + .placeholder{
+    display: none;
+}
+
+.searchbar{
+    width: 60%;
+    height: 35px;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+    border-style: none;
+    color: white;
+    background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+    font-weight: 300;
+    font-family: cursive;
+    outline-style: none;
+    padding: 3px;
+    box-shadow: 2px 3px 5px rgb(173, 219, 230);
+}
+
+.searchbar:hover{
+    box-shadow: 2px 4px 5px rgb(241, 151, 219);
+}
+
+.fa-search {
+  color:white;
+  position: absolute;
+  top: 4%;
+  left: 24%;
+  transform: translateY(-50%);
+  width: 25px;
+}
+
+.hstyle{
+    font-size:25px;
+     font-weight: bolder;
+     font-family: 'Courier New', Courier, monospace;
+     font-variant: inherit;
+     color: white;
+}
+
+.border-bottom{
+    border-bottom: 5px solid white;
+    border-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+    border-image-slice:1;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
+     width: 135%;
+}
+
+.p1{
+    position: absolute;
+    top: 105%;
+    left: -14%;
+}
+
+.p2{
+    position: absolute;
+    top: 105%;
+    right: -14%;
+}
+
+#static{
+    position: absolute;
+    top: 13%;
+    left: 6%;
+}
+
+#motion{
+    position: absolute;
+    top: 13%;
+    right: 6%;
+}
+
+.motion{
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right,white,#fc5c7d, #6a82fb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fill 0.6s ease forwards;
+}
+
+@keyframes fill{
+    to{
+        background-position: -100% 0;
+    }
+}
+
+.static{
+    background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.staticrev{
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right,#fc5c7d, #6a82fb,white,white,white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: jill 0.6s ease forwards;
+}
+
+@keyframes jill{
+    to{
+        background-position: -100% 0;
+    }
+}
+
+.motionrev{
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left,#fc5c7d, #6a82fb,white,white,white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dill 0.6s ease backwards;
+}
+
+@keyframes dill{
+    to{
+        background-position: 200% 100%;
+    }
+}
+
+.static2{
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left,white,white,#fc5c7d, #6a82fb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dill 0.6s ease backwards;
+}
+
+@keyframes dill{
+    to{
+        background-position: 200% 100%;
+    }
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(mdin.otf);
+}
+
+.h1{
+    font-size:25px;
+    font-family: myFont;
+    letter-spacing:1px;
+    font-variant: inherit;
+    color: rgb(146, 221, 240);
+    margin-top: 23%;
+    margin-left: 3%;
+}
+
+.hani{
+    animation: hslide 0.6s ease forwards alternate-reverse;
+}
+
+@keyframes hslide{
+    0%{
+        margin-left: 5%;
+    }
+    25%{
+        margin-left: 50%;
+    } 
+    50%{
+        margin-left: 100%;
+        opacity: 1;
+    }
+    75%{
+        margin-left: 0%;
+        opacity: 0;
+    }
+    100%{
+        margin-left: 3%;
+        opacity: 1;
+    }
+}
+
+.hani2{
+    animation: hslide2 0.6s ease backwards alternate-reverse;
+}
+
+@keyframes hslide2{
+    0%{
+        margin-left: 3%;
+        opacity: 1;
+    }
+    25%{
+        margin-left: 0%;
+        opacity: 0;
+    } 
+    50%{
+        margin-left: 100%;
+        opacity: 0;
+    }
+    75%{
+        margin-left: 50%;
+        opacity: 1;
+    }
+    100%{
+        margin-left: 25%;
+        opacity: 1;
+    }
+}
+
+.outer {
+    width: 500px;
+    height: 500px;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.outer .scroll-box{
+    background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+    width: 30%;
+    height: 30%;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-left: 2%;
+    box-shadow: 2px 3px 5px rgb(173, 219, 230);
+}
+
+.view-button{
+    display: inline-block;
+  font-size: 25px;
+  font-weight: 500;
+  background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 5%;
+    width: 60%;
+  position: absolute;
+  top: 12%;
+}
+
+.right-arrow:before{
+    content:'\25BA'
+}
+
+.h2{  
+    font-size:25px;
+    font-family: myFont;
+    letter-spacing:1px;
+    font-variant: inherit;
+    color: rgb(146, 221, 240);
+    margin-left: 3%;
+    position: absolute;
+    top: 56%;
+}
+
+.outer2 {
+    width: 500px;
+    height: 500px;
+    white-space: nowrap;
+    position: absolute;
+    top: 62%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.outer2 .scroll-box{
+    background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+    width: 30%;
+    height: 30%;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-left: 2%;
+    box-shadow: 2px 3px 5px rgb(173, 219, 230);
+}
+
+.scroll-boxstyle{
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right,#fc5c7d,#6a82fb);
+    width: 30%;
+    height: 30%;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-left: 2%;
+    animation: bc 0.6s ease forwards;
+}
+
+@keyframes bc{
+    to{
+        background-position: -50% 0%;
+    }
+}
+
+.view-button2{
+    display: inline-block;
+  font-size: 25px;
+  font-weight: 500;
+  background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 5%;
+    width: 60%;
+  position: absolute;
+  top: 12%;
+}
+
+/*  SHAPES CREATION */
+
+.five-pointed-star {
+ --star-color:rgb(8, 6, 0);
+ margin:35% auto;
+ font-size:75px;
+ position: relative;
+ display: block;
+ width: 0px;
+ height: 0px;
+ border-right: 1em solid transparent;
+ border-bottom: 0.7em solid var(--star-color);
+ border-left: 1em solid transparent;
+ transform: rotate(35deg);
+}
+
+.ad1{
+  animation: m1 4s linear infinite;
+}
+
+@keyframes m1{
+  0%{
+transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.five-pointed-star:before {
+ border-bottom: 0.8em solid var(--star-color);
+ border-left: 0.3em solid transparent;
+ border-right: 0.3em solid transparent;
+ position: absolute;
+ height: 0;
+ width: 0;
+ top: -0.45em;
+ left: -0.65em;
+ display: block;
+ content:"";
+ transform: rotate(-35deg);
+}
+.five-pointed-star:after {
+ position: absolute;
+ display: block;
+ top: 0.03em;
+ left: -1.05em;
+ width: 0;
+ height: 0;
+ border-right: 1em solid transparent;
+ border-bottom: 0.7em solid var(--star-color);
+ border-left: 1em solid transparent;
+ transform: rotate(-70deg);
+ content:"";
+}
+
+.moon {
+    margin-top: 1%;
+    margin-left: 3%;
+  width: 25%;
+  height: 23%;
+  border-radius: 50%;
+  background: linear-gradient(to top,white,black);
+  position: absolute;
+  overflow: hidden;
+}
+
+.moon:before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 20px black;
+  transform: rotate(-45deg);
+}
+
+.crater1,
+.crater2,
+.crater3,
+.crater4,
+.crater5,
+.crater6,
+.crater7 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.ad2{
+  animation: m2 2s linear infinite;
+}
+
+@keyframes m2{
+  0%,100%{
+    opacity: 0.1;
+  }
+  50%{
+    opacity:1;
+  }
+}
+
+.crater1 {
+  top: 20%;
+  left: 30%;
+}
+
+.crater2 {
+  top: 40%;
+  left: 50%;
+}
+
+.crater3 {
+  top: 60%;
+  left: 80%;
+}
+
+.crater4 {
+  top: 70%;
+  left: 20%;
+}
+
+.crater5 {
+  top: 80%;
+  left: 70%;
+}
+
+.crater6 {
+  top: 10%;
+  left: 70%;
+}
+
+.crater7 {
+  top: 50%;
+  left: 10%;
+}
+
+.moon:hover .crater1,
+.moon:hover .crater2,
+.moon:hover .crater3,
+.moon:hover .crater4,
+.moon:hover .crater5,
+.moon:hover .crater6,
+.moon:hover .crater7 {
+  opacity: 1;
+}
+
+.triangle-up {
+      width: 0;
+      height: 0;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      border-bottom: 120px solid black;
+      margin-top: 3%;
+      margin-left: 3%;
+    }
+
+    .triangle-down {
+      width: 0;
+      height: 0;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      border-top: 120px solid black;
+      margin-top: 6%;
+      margin-left: 3%;
+    }
+
+    .heart {
+      position: relative;
+      width: 200%;
+      height: 200%;
+      margin-top: 10%;
+    }
+    .heart:before,
+    .heart:after {
+      position: absolute;
+      content: "";
+      left: 80px;
+      top: 0;
+      width: 80px;
+      height: 120px;
+      background: black;
+      border-radius: 80px 80px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+    .heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+    .infinity {
+      position: relative;
+      width: 150px;
+      height: 50px;
+      box-sizing: content-box;
+      margin-top: 20%;
+    }
+    .infinity:before,
+    .infinity:after {
+      content: "";
+      box-sizing: content-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border: 20px solid black;
+      border-radius: 100px 100px 0 100px;
+      transform: rotate(-45deg);
+    }
+    .infinity:after {
+      left: auto;
+      right: 0;
+      border-radius: 100px 100px 100px 0;
+      transform: rotate(45deg);
+    }
+
+/*****  CREATURES CREATIONS  *****/
+:root {
+  --penguin-size: 100%;
+  --penguin-skin: gray;
+  --penguin-belly: white;
+  --penguin-beak: orange;
+}
+
+.penguin * {
+  position: absolute;
+}
+
+.penguin {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 3%;
+  width: var(--penguin-size, 200%);
+  height: var(--penguin-size, 200%);
+}
+
+.penguin-top {
+  top: 2%;
+  left: 25%;
+  background: var(--penguin-skin, gray);
+  width: 50%;
+  height: 45%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.penguin-bottom {
+  top: 40%;
+  left: 23.5%;
+  background: var(--penguin-skin, gray);
+  width: 53%;
+  height: 45%;
+  border-radius: 70% 70% 100% 100%;
+}
+
+.right-hand {
+  top: 0%;
+  left: -5%;
+  background: var(--penguin-skin, gray);
+  width: 30%;
+  height: 60%;
+  border-radius: 30% 30% 120% 30%;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.left-hand {
+  top: 0%;
+  left: 75%;
+  background: var(--penguin-skin, gray);
+  width: 30%;
+  height: 60%;
+  border-radius: 30% 30% 30% 120%;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.right-cheek {
+  top: 15%;
+  left: 35%;
+  background: var(--penguin-belly, white);
+  width: 60%;
+  height: 70%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.left-cheek {
+  top: 15%;
+  left: 5%;
+  background: var(--penguin-belly, white);
+  width: 60%;
+  height: 70%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.belly {
+  top: 60%;
+  left: 2.5%;
+  background: var(--penguin-belly, white);
+  width: 95%;
+  height: 100%;
+  border-radius: 120% 120% 100% 100%;
+}
+
+.right-feet {
+  top: 85%;
+  left: 60%;
+  background: var(--penguin-beak, orange);
+  width: 15%;
+  height: 30%;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(-80deg);
+  z-index: -2222;
+}
+
+.left-feet {
+  top: 85%;
+  left: 25%;
+  background: var(--penguin-beak, orange);
+  width: 15%;
+  height: 30%;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(80deg);
+  z-index: -2222;
+}
+
+.right-eye {
+  top: 45%;
+  left: 60%;
+  background: black;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+
+.left-eye {
+  top: 45%;
+  left: 25%;
+  background: black;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+
+.sparkle {
+  top: 25%;
+  left: 15%;
+  background: white;
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+}
+
+.blush-right {
+  top: 65%;
+  left: 15%;
+  background: pink;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.blush-left {
+  top: 65%;
+  left: 70%;
+  background: pink;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.beak-top {
+  top: 60%;
+  left: 40%;
+  background: var(--penguin-beak, orange);
+  width: 20%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.beak-bottom {
+  top: 65%;
+  left: 42%;
+  background: var(--penguin-beak, orange);
+  width: 16%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.eyes {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-top: 30%;
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%);
+}
+
+.eye:nth-child(1) {
+  left: 25%;
+}
+
+.eye:nth-child(2) {
+  left: 75%;
+}
+
+.pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  transform: translate(-50%, -50%);
+}
+
+.ad8i,.ad8ii{
+  animation: m8 1s linear infinite;
+}
+
+@keyframes m8{
+  0%,100%{   
+    width: 20px;
+  height: 20px;
+  }
+  50%{
+    width: 0px;
+  height: 0px;
+  }
+}
+
+.leaf, .leaf:last-of-type {
+  box-shadow: -1px 1px 2px #835d46;
+  width: 50px;
+  height: 150px;
+  background-image: linear-gradient(to top left, #A0DE21 49%, transparent 49.5%, transparent 51%, #A0DE21 51%);
+  -moz-border-radius: 100% /120px 0px;
+  -webkit-border-radius: 100% / 120px 0px;
+  border-radius: 100% 0 / 140px 0px;
+  display:inline-block;
+  transform:rotate(15deg);
+  margin:0 -0.5em;
+}
+.leaf:first-of-type {  
+  background-image: linear-gradient(to top right, #A0DE21 49%, transparent 49.5%, transparent 51%, #A0DE21 51%);
+  border-radius: 0 100%  /0  140px ;  
+  transform:rotate(-15deg);
+}
+.leaf:first-child + .leaf {
+  transform:rotate(-29deg);
+  vertical-align:1.3em;
+  margin:0 -1em;
+}
+
+.batmask{
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(evenodd, 37.5% 36%, 62.5% 36%, 75% 11%, 85.71% 36%, 75% 86%, 62.5% 86%, 62.5% 60.07%, 75% 50.57%, 57.92% 50.57%, 62.5% 60.07%, 62.5% 86%, 37.5% 86%, 37.5% 60.07%, 25% 50.57%, 42.08% 50.57%, 37.5% 60.07%, 37.5% 86%, 25% 86%, 14.29% 36%, 25.9% 11%);
+background-color:black;
+}
+
+.unnamed-mask{
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(evenodd, 36.61% 19.72%, 58.58% 20.64%, 78.3% 0%, 80.78% 37.32%, 74.11% 89.25%, 64.36% 88.65%, 62.25% 63.79%, 61.61% 89.25%, 61.61% 45.67%, 66.2% 38.43%, 56.61% 38.32%, 61.61% 46.31%, 61.61% 89.25%, 46.61% 63.79%, 52.44% 63.28%, 49.11% 54.48%, 46.61% 63.79%, 61.61% 89.25%, 36.61% 89.25%, 32.99% 45.67%, 27.82% 38.32%, 38.64% 38.12%, 32.99% 45.75%, 36.61% 89.25%, 34.5% 63.68%, 33.49% 89.25%, 30.36% 89.25%, 24.11% 89.25%, 13.4% 39.25%, 14.51% 0%, 36.61% 19.72%);
+background-color: #000000;
+}
+
+.branch{
+  margin-top: -85%;
+  width: 100%;
+  height: 80%;
+  clip-path: polygon(32.82% 32.76%, 48.28% 37.42%, 42.32% 19.83%, 54.31% 32.76%, 67.7% 19.83%, 59.72% 37.42%, 75.79% 32.76%, 63.74% 42.09%, 63.75% 77.32%, 63.75% 87.25%, 70.25% 94.76%, 32.82% 94.76%, 39.65% 89.97%, 43.64% 82.64%, 43.65% 82.65%, 43.65% 42.09%);
+  background-color: #511603;
+}
+
+.leaves{
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(20.76% 12.71%, 26.03% 10.47%, 31.12% 12.02%, 34.68% 6.5%, 40.65% 3.75%, 47.97% 6.5%, 51.25% 12.02%, 57.07% 8.25%, 63.88% 9.56%, 68.6% 12.02%, 69.44% 17.28%, 75.27% 16.35%, 77.45% 23.02%, 80.39% 20.68%, 85.5% 25%, 84.51% 33.23%, 87.58% 36.48%, 87.19% 41.92%, 83.6% 46.8%, 76.23% 47.23%, 74.14% 52.82%, 68.6% 55.94%, 60.48% 54.9%, 57.34% 51.25%, 54.09% 56.59%, 46.82% 58.22%, 40.65% 55.24%, 37.75% 52.82%, 31.76% 55.24%, 27.25% 54.34%, 23.31% 49.49%, 18.51% 50.56%, 14.3% 48.02%, 13.74% 44.76%, 13.9% 41.46%, 17.36% 37.93%, 16.28% 35.52%, 14.95% 33.23%, 16.28% 28.92%, 18.51% 25%, 17.36% 18.63%);
+background-color: #0a490a;
+}
+
+.dmnd{
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 86.8% 50%, 50% 100%, 10.6% 50%);
+background-color: #000000;
+}
+
+.msg-bub{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 80%, 95% 85%, 85% 85%, 85% 100%, 70% 85%, 5% 85%, 0% 80%, 0% 5%);
+        background-color: black;
+      }  
+      
+.pent{
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 2.45%, 100% 38.77%, 80.9% 97.55%, 19.1% 97.55%, 0% 38.77%);
+background-color: black;
+}
+
+.oct{
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(70.71% 100%, 100% 70.71%, 100% 29.29%, 70.71% 0%, 29.29% 0%, 0% 29.29%, 0% 70.71%, 29.29% 100%);
+background-color: black;
+}
+
+.hex{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(90.75% 50%, 72.62% 87.24%, 29.32% 87.24%, 7.25% 50%, 29% 9.38%, 69% 9.38%);
+        background-color: black;
+      }
+
+      .apple{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(evenodd, 12.5% 49.27%, 16.97% 36.08%, 29.74% 30.53%, 44.61% 34.08%, 33.09% 31.81%, 25.98% 19.03%, 16.44% 11.61%, 16.26% 6.98%, 18.35% 4.41%, 27.6% 5.64%, 35.64% 5.64%, 44.44% 9.58%, 52.5% 15.99%, 51.8% 21.66%, 55.36% 16.71%, 65.61% 12.8%, 67.6% 15.57%, 70.02% 17.75%, 71.22% 23.32%, 64.89% 25.84%, 56.93% 31.48%, 56.13% 36.36%, 60.2% 33.56%, 68.87% 31.39%, 78.53% 31.39%, 86.03% 40.05%, 89.68% 51.7%, 86.03% 65.67%, 78.87% 79.91%, 70.26% 89.34%, 63.6% 93.82%, 55.08% 94.13%, 50.85% 91.03%, 46.57% 94.44%, 39% 93.82%, 26.29% 87.22%, 19.85% 79.28%, 13.29% 64.77%);
+background-color: #000000;
+      }
+
+      .c-moon{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(19.13% 48.3%, 22.75% 32.27%, 36.89% 17.84%, 56.31% 12.27%, 56.81% 14.02%, 57.72% 14.02%, 49.88% 18.93%, 43.44% 25.59%, 40.76% 31.57%, 39.3% 38.35%, 38.41% 44.8%, 45.33% 58.97%, 49.7% 63.28%, 58.27% 69.2%, 65.72% 71.77%, 72.14% 71.77%, 80.26% 69.07%, 89.94% 64.43%, 80.26% 78.26%, 67.92% 85.66%, 56.03% 88.12%, 45.71% 85.66%, 36.45% 81.8%, 26.6% 73.97%, 22.29% 64.43%);
+        background-color: black;
+      }
+
+/* CSS CODES OF ALL SHAPES DIV STYLE HANDLER */
+.mscode{
+    width: 80%;
+    height: 80%;
+    border-radius: 25px;
+    background-color: black;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    box-shadow: 2px 3px 5px rgb(241, 151, 219);
+}
+
+.title{
+    color: rgb(146, 221, 240);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 5px;
+}
+
+.copt{
+    background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+.margin{
+    margin-left: 40%;
+}
+
+.vl{
+    border-left: 6px solid #6a82fb;
+    border-radius: 10px;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top:18%;
+    display: inline-block;
+}
+
+.htmlcodes{
+  position: absolute;
+  top: 22%;
+  left: 3%;
+  border-radius: 8px;
+  padding: 5px;
+  height: 330px;
+  width: 45%;
+  font-size: larger;
+  outline-style: none;
+  box-shadow: 2px 3px 5px rgb(241, 151, 219);
+  background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+  color: white;
+  font-weight: 400;
+}
+
+.csscodes{
+  position: absolute;
+  top: 22%;
+  left: 53%;
+  border-radius: 8px;
+  padding: 5px;
+  height: 330px;
+  width: 45%;
+  font-size: large;
+  outline-style: none;
+  box-shadow: 2px 3px 5px rgb(241, 151, 219);
+  background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+  color: white;
+  font-weight: 400;
+}
+
+.csscodes2{
+  position: absolute;
+  top: 22%;
+  left: 53%;
+  border-radius: 8px;
+  padding: 5px;
+  height: 330px;
+  width: 45%;
+  font-size: large;
+  outline-style: none;
+  box-shadow: 2px 3px 5px rgb(241, 151, 219);
+  background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+  color: white;
+  font-weight: 400;
+  display: none;
+}
+
+.cross{
+    color: red;
+    position: absolute;
+    top: 0%;
+    right: 3%;
+    font-size: 30px;
+    font-weight: bolder;
+}
+/* ALL CODES HIDDEN PLACE  */
+#c1,#c2,#c3,#c4,#c5,#c6,#c7,#c8,#c9,#c10,#c11,#c12,#c13,#c14,#c15,#c16,#c17,#c18,#c19{
+    display: none;
+    z-index: 10000;
+}
+
+#searchon{
+  display: none;
+}
+
+.stylegallery{
+  width:100% ;
+  height: 100%;
+border: 0px solid rgb(255, 253, 253);
+position: absolute;
+margin: auto;
+display: flex;
+justify-content: space-evenly;
+gap: 8%;
+flex-wrap: wrap;
+padding-top: 10%;
+}
+
+figure{
+  background-image: linear-gradient(to right,#fc5c7d, #6a82fb);
+  width: 40%;
+  height: 25%;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+ figcaption{
+  visibility: hidden;
+}
+
+            </style>
+
+    </head>
+
+    <body id="body">
+
+  <!------------SEARCH BOX--------------->
+<div class="center">
+    <i class="fas fa-search"></i><input type="text" id="searchbar" class="searchbar" onkeyup="search_css()"/>
+    <label class="placeholder" id="plch">SEARCH</label>
+</div>
+<span id="search-hide">
+<div id="static" class="hstyle static"><div class="border-bottom p1"></div>Static</div>     <div id="motion" class="hstyle"><div class="border-bottom p2"></div>Motion</div>
+
+<p id="h1" class="h1">Shapes</p><!----hani static m jaane ke liye hai aur hani2 motion m jane ke liye---->
+
+<!------------STATIC SHAPES--------->
+<div class="outer" id="outer">
+    <div class="scroll-box" id="ss1"><div class="five-pointed-star ss" id="a1"></div></div>
+    <div class="scroll-box" id="ss2">  <div class="moon"><span  id="a2">
+        <div class="crater1"></div>
+        <div class="crater2"></div>
+        <div class="crater3"></div>
+        <div class="crater4"></div>
+        <div class="crater5"></div>
+        <div class="crater6"></div>
+        <div class="crater7"></div></span>
+      </div></div>
+    <div class="scroll-box" id="ss3"> <div class="triangle-up"></div> </div>
+    <div class="scroll-box" id="ss4"> <div class="triangle-down"></div> </div>
+    <div class="scroll-box" id="ss5"><div class="heart"></div></div>
+    <div class="scroll-box" id="ss6"><div class="infinity"></div></div>
+    <div class="view-button" id="view1">View All<span class="right-arrow"></span></div>
+    </div>
+
+ <p id="h2" class="h2">Creatures</p>
+ <div class="outer2" id="outer2">
+    <div class="scroll-box" id="mc1">
+        <div class="penguin">
+            <div class="penguin-bottom">
+              <div class="right-hand"></div>
+              <div class="left-hand"></div>
+              <div class="right-feet"></div>
+              <div class="left-feet"></div>
+            </div>
+            <div class="penguin-top">
+              <div class="right-cheek"></div>
+              <div class="left-cheek"></div>
+              <div class="belly"></div>
+              <div class="right-eye">
+                <div class="sparkle"></div>
+              </div>
+              <div class="left-eye">
+                <div class="sparkle"></div>
+              </div>
+              <div class="blush-right"></div>
+              <div class="blush-left"></div>
+              <div class="beak-top"></div>
+              <div class="beak-bottom"></div>
+            </div>
+          </div>
+    </div>
+    <div class="scroll-box" id="mc2">
+      <div class="eyes">
+        <div class="eye">
+          <div class="pupil" id="a8i"></div>
+        </div>
+        <div class="eye">
+          <div class="pupil" id="a8ii"></div>
+        </div>
+      </div>      
+
+    </div>
+    <div class="scroll-box" id="mc3">
+      <div style="display:flex;justify-content:center;align-items:center;">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div></div>
+    <div class="scroll-box" id="mc4">
+      <div class="batmask"></div>
+    </div>
+    <div class="scroll-box" id="mc5">
+      <div class="unnamed-mask"></div>
+    </div>
+    <div class="scroll-box" id="mc6">
+      <div class="leaves"></div>
+      <div class="branch"></div>
+    </div>
+    <div class="view-button2" id="view2">View All<span class="right-arrow"></span></div>
+    </div>
+
+  </span><!-------------END PART OF SEARCH HIDE-------->
+    <!-----------------CSS CODE OF SHAPES------------->
+     <div class="mscode" id="c1">
+        <span class="cross" id="cross1">&#9747</span>
+        <p class="title">Five Pointed Star</p>
+        <p class="copt" id="html1">HTML</p>
+        <textarea readonly class="htmlcodes"><div class="five-pointed-star"> </div></textarea>
+         <div class="vl"></div>
+          <p class="copt margin" id="css1">CSS</p>
+          <textarea readonly class="csscodes">
+ .five-pointed-star {  --star-color:goldenrod; margin:35% auto; font-size:75px;   position: relative;
+display: block;
+width: 0px;
+height: 0px;
+border-right: 1em solid transparent;
+border-bottom: 0.7em solid var(--star-color);
+border-left: 1em solid transparent;
+transform: rotate(35deg);
+  }
+.five-pointed-star:before {
+border-bottom: 0.8em solid var(--star-color);
+border-left: 0.3em solid transparent;
+border-right: 0.3em solid transparent;
+position: absolute;
+height: 0;
+width: 0;
+top: -0.45em;
+left: -0.65em;
+display: block;
+content:"";
+transform: rotate(-35deg);
+  }
+.five-pointed-star:after {
+position: absolute;
+display: block;
+top: 0.03em;
+left: -1.05em; 
+width: 0;
+height: 0;
+border-right: 1em solid transparent;
+border-bottom: 0.7em solid var(--star-color);
+border-left: 1em solid transparent;
+transform: rotate(-70deg);
+content:""; 
+   }
+        </textarea>
+        <textarea readonly class="csscodes2">
+          .five-pointed-star {  --star-color:goldenrod; margin:35% auto; font-size:75px;   position: relative;
+            display: block;
+            width: 0px;
+            height: 0px;
+            border-right: 1em solid transparent;
+            border-bottom: 0.7em solid var(--star-color);
+            border-left: 1em solid transparent;
+            transform: rotate(35deg);
+animation:m1 4s linear infinite;
+              }
+              @keyframes m1{
+                0%{
+              transform: rotate(0deg);
+                }
+                50%{
+                  transform: rotate(180deg);
+                }
+                100%{
+                  transform: rotate(360deg);
+                }
+              }
+            .five-pointed-star:before {
+            border-bottom: 0.8em solid var(--star-color);
+            border-left: 0.3em solid transparent;
+            border-right: 0.3em solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -0.45em;
+            left: -0.65em;
+            display: block;
+            content:"";
+            transform: rotate(-35deg);
+              }
+            .five-pointed-star:after {
+            position: absolute;
+            display: block;
+            top: 0.03em;
+            left: -1.05em; 
+            width: 0;
+            height: 0;
+            border-right: 1em solid transparent;
+            border-bottom: 0.7em solid var(--star-color);
+            border-left: 1em solid transparent;
+            transform: rotate(-70deg);
+            content:""; 
+               }
+        </textarea>
+     </div>
+
+     <div class="mscode" id="c2">
+        <span class="cross" id="cross2">&#9747</span>
+        <p class="title">3D Moon</p>
+        <p class="copt" id="html2">HTML</p>
+        <textarea readonly class="htmlcodes"> <div class="moon">
+            <div class="crater1"></div>
+            <div class="crater2"></div>
+            <div class="crater3"></div>
+            <div class="crater4"></div>
+            <div class="crater5"></div>
+            <div class="crater6"></div>
+            <div class="crater7"></div>
+          </div></textarea>
+         <div class="vl"></div>
+          <p class="copt margin" id="css2">CSS</p>
+          <textarea readonly class="csscodes">
+            .moon {
+                margin-top: 1%;
+                margin-left: 3%;
+              width: 25%;
+              height: 23%;
+              border-radius: 50%;
+              background: linear-gradient(to top,white,black);
+              position: absolute;
+              overflow: hidden;
+            }
+            
+            .moon:before {
+              content: "";
+              position: absolute;
+              top: -30%;
+              left: -30%;
+              width: 30%;
+              height: 30%;
+              border-radius: 50%;
+              box-shadow: inset 0 0 0 20px black;
+              transform: rotate(-45deg);
+            }
+            
+            .crater1,
+            .crater2,
+            .crater3,
+            .crater4,
+            .crater5,
+            .crater6,
+            .crater7 {
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              background-color: #f2f2f2;
+              border-radius: 50%;
+              opacity: 0.6;
+            }
+            
+            .crater1 {
+              top: 20%;
+              left: 30%;
+            }
+            
+            .crater2 {
+              top: 40%;
+              left: 50%;
+            }
+            
+            .crater3 {
+              top: 60%;
+              left: 80%;
+            }
+            
+            .crater4 {
+              top: 70%;
+              left: 20%;
+            }
+            
+            .crater5 {
+              top: 80%;
+              left: 70%;
+            }
+            
+            .crater6 {
+              top: 10%;
+              left: 70%;
+            }
+            
+            .crater7 {
+              top: 50%;
+              left: 10%;
+            }
+            
+            .moon:hover .crater1,
+            .moon:hover .crater2,
+            .moon:hover .crater3,
+            .moon:hover .crater4,
+            .moon:hover .crater5,
+            .moon:hover .crater6,
+            .moon:hover .crater7 {
+              opacity: 1;
+            }
+        </textarea>
+        <textarea readonly class="csscodes2">
+          .moon {
+              margin-top: 1%;
+              margin-left: 3%;
+            width: 25%;
+            height: 23%;
+            border-radius: 50%;
+            background: linear-gradient(to top,white,black);
+            position: absolute;
+            overflow: hidden;
+          }
+          
+          .moon:before {
+            content: "";
+            position: absolute;
+            top: -30%;
+            left: -30%;
+            width: 30%;
+            height: 30%;
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 20px black;
+            transform: rotate(-45deg);
+          }
+          
+          .crater1,
+          .crater2,
+          .crater3,
+          .crater4,
+          .crater5,
+          .crater6,
+          .crater7 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #f2f2f2;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: m2 2s linear infinite;
+          }
+
+          @keyframes m2{
+            0%,100%{
+              opacity: 0.1;
+            }
+            50%{
+              opacity:1;
+            }
+          }
+          
+          .crater1 {
+            top: 20%;
+            left: 30%;
+          }
+          
+          .crater2 {
+            top: 40%;
+            left: 50%;
+          }
+          
+          .crater3 {
+            top: 60%;
+            left: 80%;
+          }
+          
+          .crater4 {
+            top: 70%;
+            left: 20%;
+          }
+          
+          .crater5 {
+            top: 80%;
+            left: 70%;
+          }
+          
+          .crater6 {
+            top: 10%;
+            left: 70%;
+          }
+          
+          .crater7 {
+            top: 50%;
+            left: 10%;
+          }
+          
+          .moon:hover .crater1,
+          .moon:hover .crater2,
+          .moon:hover .crater3,
+          .moon:hover .crater4,
+          .moon:hover .crater5,
+          .moon:hover .crater6,
+          .moon:hover .crater7 {
+            opacity: 1;
+          }
+      </textarea>
+     </div>
+
+     <div class="mscode" id="c3">
+        <span class="cross" id="cross3">&#9747</span>
+        <p class="title">Triangle Up</p>
+        <p class="copt" id="html3">HTML</p>
+        <textarea readonly class="htmlcodes"><div class="triangle-up"> </div></textarea>
+         <div class="vl"></div>
+          <p class="copt margin" id="css3">CSS</p>
+          <textarea readonly class="csscodes">
+            .triangle-up {
+                width: 0;
+                height: 0;
+                border-left: 70px solid transparent;
+                border-right: 70px solid transparent;
+                border-bottom: 120px solid black;
+              }
+                 
+        </textarea>
+     </div>
+
+     <div class="mscode" id="c4">
+        <span class="cross" id="cross4">&#9747</span>
+        <p class="title">Triangle Down</p>
+        <p class="copt" id="html4">HTML</p>
+        <textarea readonly class="htmlcodes"><div class="triangle-down"> </div></textarea>
+         <div class="vl"></div>
+          <p class="copt margin" id="css4">CSS</p>
+          <textarea readonly class="csscodes">
+            .triangle-down {
+                width: 0;
+                height: 0;
+                border-left: 70px solid transparent;
+                border-right: 70px solid transparent;
+                border-top: 120px solid black;
+              }
+                 
+        </textarea>
+     </div>
+
+     <div class="mscode" id="c5">
+        <span class="cross" id="cross5">&#9747</span>
+        <p class="title">Heart</p>
+        <p class="copt" id="html5">HTML</p>
+        <textarea readonly class="htmlcodes"><div class="heart"> </div></textarea>
+         <div class="vl"></div>
+          <p class="copt margin" id="css5">CSS</p>
+          <textarea readonly class="csscodes">
+            .heart {
+                position: relative;
+                width: 200%;
+                height: 200%;
+                margin-top: 10%;
+              }
+              .heart:before,
+              .heart:after {
+                position: absolute;
+                content: "";
+                left: 80px;
+                top: 0;
+                width: 80px;
+                height: 120px;
+                background: black;
+                border-radius: 80px 80px 0 0;
+                transform: rotate(-45deg);
+                transform-origin: 0 100%;
+              }
+              .heart:after {
+                left: 0;
+                transform: rotate(45deg);
+                transform-origin: 100% 100%;
+              }
+        </textarea>
+     </div>
+
+     <div class="mscode" id="c6">
+        <span class="cross" id="cross6">&#9747</span>
+        <p class="title">Infinity</p>
+        <p class="copt" id="html6">HTML</p>
+        <textarea readonly class="htmlcodes"><div class="infinity"> </div></textarea>
+         <div class="vl"></div>
+          <p class="copt margin" id="css6">CSS</p>
+          <textarea readonly class="csscodes">
+            .infinity {
+                position: relative;
+                width: 150px;
+                height: 50px;
+                box-sizing: content-box;
+                margin-top: 20%;
+              }
+              .infinity:before,
+              .infinity:after {
+                content: "";
+                box-sizing: content-box;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30px;
+                height: 30px;
+                border: 20px solid black;
+                border-radius: 100px 100px 0 100px;
+                transform: rotate(-45deg);
+              }
+              .infinity:after {
+                left: auto;
+                right: 0;
+                border-radius: 100px 100px 100px 0;
+                transform: rotate(45deg);
+              }      
+        </textarea>
+     </div>
+
+     <div class="mscode" id="c7">
+        <span class="cross" id="cross7">&#9747</span>
+        <p class="title">Penguin</p>
+        <p class="copt" id="html7">HTML</p>
+        <textarea readonly class="htmlcodes"> 
+                   <div class="penguin">
+            <div class="penguin-bottom">
+              <div class="right-hand"></div>
+              <div class="left-hand"></div>
+              <div class="right-feet"></div>
+              <div class="left-feet"></div>
+            </div>
+            <div class="penguin-top">
+              <div class="right-cheek"></div>
+              <div class="left-cheek"></div>
+              <div class="belly"></div>
+              <div class="right-eye">
+                <div class="sparkle"></div>
+              </div>
+              <div class="left-eye">
+                <div class="sparkle"></div>
+              </div>
+              <div class="blush-right"></div>
+              <div class="blush-left"></div>
+              <div class="beak-top"></div>
+              <div class="beak-bottom"></div>
+            </div>
+          </div></textarea>
+         <div class="vl"></div>
+          <p class="copt margin" id="css7">CSS</p>
+          <textarea readonly class="csscodes">
+            :root {
+                --penguin-size: 100%;
+                --penguin-skin: gray;
+                --penguin-belly: white;
+                --penguin-beak: orange;
+              }
+              
+              .penguin * {
+                position: absolute;
+              }
+              
+              .penguin {
+                position: relative;
+                margin: auto;
+                display: block;
+                margin-top: 3%;
+                width: var(--penguin-size, 200%);
+                height: var(--penguin-size, 200%);
+              }
+              
+              .penguin-top {
+                top: 2%;
+                left: 25%;
+                background: var(--penguin-skin, gray);
+                width: 50%;
+                height: 45%;
+                border-radius: 70% 70% 60% 60%;
+              }
+              
+              .penguin-bottom {
+                top: 40%;
+                left: 23.5%;
+                background: var(--penguin-skin, gray);
+                width: 53%;
+                height: 45%;
+                border-radius: 70% 70% 100% 100%;
+              }
+              
+              .right-hand {
+                top: 0%;
+                left: -5%;
+                background: var(--penguin-skin, gray);
+                width: 30%;
+                height: 60%;
+                border-radius: 30% 30% 120% 30%;
+                transform: rotate(45deg);
+                z-index: -1;
+              }
+              
+              .left-hand {
+                top: 0%;
+                left: 75%;
+                background: var(--penguin-skin, gray);
+                width: 30%;
+                height: 60%;
+                border-radius: 30% 30% 30% 120%;
+                transform: rotate(-45deg);
+                z-index: -1;
+              }
+              
+              .right-cheek {
+                top: 15%;
+                left: 35%;
+                background: var(--penguin-belly, white);
+                width: 60%;
+                height: 70%;
+                border-radius: 70% 70% 60% 60%;
+              }
+              
+              .left-cheek {
+                top: 15%;
+                left: 5%;
+                background: var(--penguin-belly, white);
+                width: 60%;
+                height: 70%;
+                border-radius: 70% 70% 60% 60%;
+              }
+              
+              .belly {
+                top: 60%;
+                left: 2.5%;
+                background: var(--penguin-belly, white);
+                width: 95%;
+                height: 100%;
+                border-radius: 120% 120% 100% 100%;
+              }
+              
+              .right-feet {
+                top: 85%;
+                left: 60%;
+                background: var(--penguin-beak, orange);
+                width: 15%;
+                height: 30%;
+                border-radius: 50% 50% 50% 50%;
+                transform: rotate(-80deg);
+                z-index: -2222;
+              }
+              
+              .left-feet {
+                top: 85%;
+                left: 25%;
+                background: var(--penguin-beak, orange);
+                width: 15%;
+                height: 30%;
+                border-radius: 50% 50% 50% 50%;
+                transform: rotate(80deg);
+                z-index: -2222;
+              }
+              
+              .right-eye {
+                top: 45%;
+                left: 60%;
+                background: black;
+                width: 15%;
+                height: 17%;
+                border-radius: 50%;
+              }
+              
+              .left-eye {
+                top: 45%;
+                left: 25%;
+                background: black;
+                width: 15%;
+                height: 17%;
+                border-radius: 50%;
+              }
+              
+              .sparkle {
+                top: 25%;
+                left: 15%;
+                background: white;
+                width: 35%;
+                height: 35%;
+                border-radius: 50%;
+              }
+              
+              .blush-right {
+                top: 65%;
+                left: 15%;
+                background: pink;
+                width: 15%;
+                height: 10%;
+                border-radius: 50%;
+              }
+              
+              .blush-left {
+                top: 65%;
+                left: 70%;
+                background: pink;
+                width: 15%;
+                height: 10%;
+                border-radius: 50%;
+              }
+              
+              .beak-top {
+                top: 60%;
+                left: 40%;
+                background: var(--penguin-beak, orange);
+                width: 20%;
+                height: 10%;
+                border-radius: 50%;
+              }
+              
+              .beak-bottom {
+                top: 65%;
+                left: 42%;
+                background: var(--penguin-beak, orange);
+                width: 16%;
+                height: 10%;
+                border-radius: 50%;
+              }
+        </textarea>
+     </div>
+
+     <div class="mscode" id="c8">
+      <span class="cross" id="cross8">&#9747</span>
+      <p class="title">Eyes</p>
+      <p class="copt" id="html8">HTML</p>
+      <textarea readonly class="htmlcodes">    <div class="eyes">
+        <div class="eye">
+          <div class="pupil"></div>
+        </div>
+        <div class="eye">
+          <div class="pupil"></div>
+        </div></textarea>
+       <div class="vl"></div>
+        <p class="copt margin" id="css8">CSS</p>
+        <textarea readonly class="csscodes">
+        
+.eyes {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-top: 30%;
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%);
+}
+
+.eye:nth-child(1) {
+  left: 25%;
+}
+
+.eye:nth-child(2) {
+  left: 75%;
+}
+
+.pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  transform: translate(-50%, -50%);
+}
+
+      </textarea>
+      <textarea readonly class="csscodes2">
+        
+        .eyes {
+          position: relative;
+          width: 100px;
+          height: 50px;
+          margin-top: 30%;
+        }
+        
+        .eye {
+          position: absolute;
+          top: 50%;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: white;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          transform: translateY(-50%);
+        }
+        
+        .eye:nth-child(1) {
+          left: 25%;
+        }
+        
+        .eye:nth-child(2) {
+          left: 75%;
+        }
+        
+        .pupil {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: black;
+          transform: translate(-50%, -50%);
+          animation: m8 1s linear infinite;
+        }
+
+        @keyframes m8{
+          0%,100%{   
+            width: 20px;
+          height: 20px;
+          }
+          50%{
+            width: 0px;
+          height: 0px;
+          }
+        }        
+              </textarea>
+   </div>
+
+   <div class="mscode" id="c9">
+    <span class="cross" id="cross9">&#9747</span>
+    <p class="title">Leaf</p>
+    <p class="copt" id="html9">HTML</p>
+    <textarea readonly class="htmlcodes">  <div style="display: flex; justify-content: center; align-items: center;">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div></textarea>
+     <div class="vl"></div>
+      <p class="copt margin" id="css9">CSS</p>
+      <textarea readonly class="csscodes">
+        .leaf, .leaf:last-of-type {
+          box-shadow: -1px 1px 2px #835d46;
+          width: 55px;
+          height: 145px;
+          background-image: linear-gradient(to top left, #A0DE21 49%, transparent 49.5%, transparent 51%, #A0DE21 51%);
+          -moz-border-radius: 100% /120px 0px;
+          -webkit-border-radius: 100% / 120px 0px;
+          border-radius: 100% 0 / 140px 0px;
+          display:inline-block;
+          transform:rotate(15deg);
+          margin:0 -0.5em;
+        }
+        .leaf:first-of-type {  
+          background-image: linear-gradient(to top right, #A0DE21 49%, transparent 49.5%, transparent 51%, #A0DE21 51%);
+          border-radius: 0 100%  /0  140px ;  
+          transform:rotate(-15deg);
+        }
+        .leaf:first-child + .leaf {
+          transform:rotate(-29deg);
+          vertical-align:1.3em;
+          margin:0 -1em;
+        }
+          
+    </textarea>
+ </div>
+
+ <div class="mscode" id="c10">
+  <span class="cross" id="cross10">&#9747</span>
+  <p class="title">Bat Mask</p>
+  <p class="copt" id="html10">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="batmask"> </div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css10">CSS</p>
+    <textarea readonly class="csscodes">
+      .batmask{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(evenodd, 37.5% 36%, 62.5% 36%, 75% 11%, 85.71% 36%, 75% 86%, 62.5% 86%, 62.5% 60.07%, 75% 50.57%, 57.92% 50.57%, 62.5% 60.07%, 62.5% 86%, 37.5% 86%, 37.5% 60.07%, 25% 50.57%, 42.08% 50.57%, 37.5% 60.07%, 37.5% 86%, 25% 86%, 14.29% 36%, 25.9% 11%);
+      background-color:black;
+      }
+           
+  </textarea>
+</div>
+
+<div class="mscode" id="c11">
+  <span class="cross" id="cross11">&#9747</span>
+  <p class="title">Unnamed Mask</p>
+  <p class="copt" id="html11">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="unnamed-mask"> </div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css11">CSS</p>
+    <textarea readonly class="csscodes">
+      .unnamed-mask{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(evenodd, 36.61% 19.72%, 58.58% 20.64%, 78.3% 0%, 80.78% 37.32%, 74.11% 89.25%, 64.36% 88.65%, 62.25% 63.79%, 61.61% 89.25%, 61.61% 45.67%, 66.2% 38.43%, 56.61% 38.32%, 61.61% 46.31%, 61.61% 89.25%, 46.61% 63.79%, 52.44% 63.28%, 49.11% 54.48%, 46.61% 63.79%, 61.61% 89.25%, 36.61% 89.25%, 32.99% 45.67%, 27.82% 38.32%, 38.64% 38.12%, 32.99% 45.75%, 36.61% 89.25%, 34.5% 63.68%, 33.49% 89.25%, 30.36% 89.25%, 24.11% 89.25%, 13.4% 39.25%, 14.51% 0%, 36.61% 19.72%);
+      background-color: #000000;
+      }   
+  </textarea>
+</div>
+
+<div class="mscode" id="c12">
+  <span class="cross" id="cross12">&#9747</span>
+  <p class="title">Tree</p>
+  <p class="copt" id="html12">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="leaves"></div>
+    <div class="branch"></div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css12">CSS</p>
+    <textarea readonly class="csscodes">
+      .branch{
+        margin-top: -85%;
+        width: 100%;
+        height: 80%;
+        clip-path: polygon(32.82% 32.76%, 48.28% 37.42%, 42.32% 19.83%, 54.31% 32.76%, 67.7% 19.83%, 59.72% 37.42%, 75.79% 32.76%, 63.74% 42.09%, 63.75% 77.32%, 63.75% 87.25%, 70.25% 94.76%, 32.82% 94.76%, 39.65% 89.97%, 43.64% 82.64%, 43.65% 82.65%, 43.65% 42.09%);
+      background-color: #511603;
+      }
+      
+      .leaves{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(20.76% 12.71%, 26.03% 10.47%, 31.12% 12.02%, 34.68% 6.5%, 40.65% 3.75%, 47.97% 6.5%, 51.25% 12.02%, 57.07% 8.25%, 63.88% 9.56%, 68.6% 12.02%, 69.44% 17.28%, 75.27% 16.35%, 77.45% 23.02%, 80.39% 20.68%, 85.5% 25%, 84.51% 33.23%, 87.58% 36.48%, 87.19% 41.92%, 83.6% 46.8%, 76.23% 47.23%, 74.14% 52.82%, 68.6% 55.94%, 60.48% 54.9%, 57.34% 51.25%, 54.09% 56.59%, 46.82% 58.22%, 40.65% 55.24%, 37.75% 52.82%, 31.76% 55.24%, 27.25% 54.34%, 23.31% 49.49%, 18.51% 50.56%, 14.3% 48.02%, 13.74% 44.76%, 13.9% 41.46%, 17.36% 37.93%, 16.28% 35.52%, 14.95% 33.23%, 16.28% 28.92%, 18.51% 25%, 17.36% 18.63%);
+      background-color: #0a490a;
+      }  
+  </textarea>
+</div>
+
+<div class="mscode" id="c13">
+  <span class="cross" id="cross13">&#9747</span>
+  <p class="title">Diamond</p>
+  <p class="copt" id="html13">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="dmnd"> </div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css13">CSS</p>
+    <textarea readonly class="csscodes">
+      .dmnd{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        background-color: #000000;
+      }   
+  </textarea>
+</div>
+
+<div class="mscode" id="c14">
+  <span class="cross" id="cross14">&#9747</span>
+  <p class="title">Speech Bubble</p>
+  <p class="copt" id="html14">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="msg-bub"> </div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css14">CSS</p>
+    <textarea readonly class="csscodes">
+      .msg-bub{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 80%, 95% 85%, 85% 85%, 85% 100%, 70% 85%, 5% 85%, 0% 80%, 0% 5%);
+        background-color: black;
+      }   
+  </textarea>
+</div>
+
+<div class="mscode" id="c15">
+  <span class="cross" id="cross15">&#9747</span>
+  <p class="title">Pentagon</p>
+  <p class="copt" id="html15">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="pent"> </div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css15">CSS</p>
+    <textarea readonly class="csscodes">
+      .pent{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(50% 2.45%, 100% 38.77%, 80.9% 97.55%, 19.1% 97.55%, 0% 38.77%);
+      background-color: black;
+      }
+  </textarea>
+</div>
+
+<div class="mscode" id="c16">
+  <span class="cross" id="cross16">&#9747</span>
+  <p class="title">Octagon</p>
+  <p class="copt" id="html16">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="oct"> </div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css16">CSS</p>
+    <textarea readonly class="csscodes">
+      .oct{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(70.71% 100%, 100% 70.71%, 100% 29.29%, 70.71% 0%, 29.29% 0%, 0% 29.29%, 0% 70.71%, 29.29% 100%);
+      background-color: black;
+      }
+  </textarea>
+</div>
+
+<div class="mscode" id="c17">
+  <span class="cross" id="cross17">&#9747</span>
+  <p class="title">Hexagon</p>
+  <p class="copt" id="html17">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="hex"> </div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css17">CSS</p>
+    <textarea readonly class="csscodes">
+      .hex{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(90.75% 50%, 72.62% 87.24%, 29.32% 87.24%, 7.25% 50%, 29% 9.38%, 69% 9.38%);
+        background-color: black;
+      }
+  </textarea>
+</div>
+
+<div class="mscode" id="c18">
+  <span class="cross" id="cross18">&#9747</span>
+  <p class="title">Apple</p>
+  <p class="copt" id="html18">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="apple"> </div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css18">CSS</p>
+    <textarea readonly class="csscodes">
+      .apple{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(evenodd, 12.5% 49.27%, 16.97% 36.08%, 29.74% 30.53%, 44.61% 34.08%, 33.09% 31.81%, 25.98% 19.03%, 16.44% 11.61%, 16.26% 6.98%, 18.35% 4.41%, 27.6% 5.64%, 35.64% 5.64%, 44.44% 9.58%, 52.5% 15.99%, 51.8% 21.66%, 55.36% 16.71%, 65.61% 12.8%, 67.6% 15.57%, 70.02% 17.75%, 71.22% 23.32%, 64.89% 25.84%, 56.93% 31.48%, 56.13% 36.36%, 60.2% 33.56%, 68.87% 31.39%, 78.53% 31.39%, 86.03% 40.05%, 89.68% 51.7%, 86.03% 65.67%, 78.87% 79.91%, 70.26% 89.34%, 63.6% 93.82%, 55.08% 94.13%, 50.85% 91.03%, 46.57% 94.44%, 39% 93.82%, 26.29% 87.22%, 19.85% 79.28%, 13.29% 64.77%);
+background-color: #000000;
+      }
+  </textarea>
+</div>
+
+<div class="mscode" id="c19">
+  <span class="cross" id="cross19">&#9747</span>
+  <p class="title">Crescent Moon</p>
+  <p class="copt" id="html19">HTML</p>
+  <textarea readonly class="htmlcodes"><div class="c-moon"> </div></textarea>
+   <div class="vl"></div>
+    <p class="copt margin" id="css19">CSS</p>
+    <textarea readonly class="csscodes">
+      .c-moon{
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(19.13% 48.3%, 22.75% 32.27%, 36.89% 17.84%, 56.31% 12.27%, 56.81% 14.02%, 57.72% 14.02%, 49.88% 18.93%, 43.44% 25.59%, 40.76% 31.57%, 39.3% 38.35%, 38.41% 44.8%, 45.33% 58.97%, 49.7% 63.28%, 58.27% 69.2%, 65.72% 71.77%, 72.14% 71.77%, 80.26% 69.07%, 89.94% 64.43%, 80.26% 78.26%, 67.92% 85.66%, 56.03% 88.12%, 45.71% 85.66%, 36.45% 81.8%, 26.6% 73.97%, 22.29% 64.43%);
+        background-color: black;
+      }
+  </textarea>
+</div>
+
+<span  id="searchon">
+  <div class="stylegallery">
+
+    <figure class="elements" id="s1">
+      <div class="five-pointed-star"></div>
+     <figcaption class="element-name">Five Pointed Star</figcaption>
+    </figure>
+    
+    <figure class="elements" id="s2">
+      <div class="triangle-up"></div>
+      <figcaption class="element-name">Triangle Up</figcaption>
+    </figure>
+
+    <figure class="elements" id="s3">
+      <div class="triangle-down"></div>
+     <figcaption class="element-name">Triangle Down</figcaption>
+    </figure>
+    
+    <figure class="elements" id="s4">
+      <div class="heart"></div>
+      <figcaption class="element-name">Heart</figcaption>
+    </figure>
+
+    <figure class="elements" id="s5">
+      <div class="infinity"></div>
+      <figcaption class="element-name">Infinity</figcaption>
+    </figure>
+
+    <!--------------SHAPES ENDS HERE & CREATURES STARTS FROM HERE------------>
+
+    <figure class="elements" id="s6">
+      <div class="penguin">
+        <div class="penguin-bottom">
+          <div class="right-hand"></div>
+          <div class="left-hand"></div>
+          <div class="right-feet"></div>
+          <div class="left-feet"></div>
+        </div>
+        <div class="penguin-top">
+          <div class="right-cheek"></div>
+          <div class="left-cheek"></div>
+          <div class="belly"></div>
+          <div class="right-eye">
+            <div class="sparkle"></div>
+          </div>
+          <div class="left-eye">
+            <div class="sparkle"></div>
+          </div>
+          <div class="blush-right"></div>
+          <div class="blush-left"></div>
+          <div class="beak-top"></div>
+          <div class="beak-bottom"></div>
+        </div>
+      </div>
+      <figcaption class="element-name">Penguin</figcaption>
+    </figure>
+
+    <figure class="elements" id="s7">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+      </div>
+      <figcaption class="element-name">Leaf Marijuana Weed</figcaption>
+    </figure>
+
+    <figure class="elements" id="s8">
+      <div class="batmask"></div>
+      <figcaption class="element-name">Bat Mask Batman Face </figcaption>
+    </figure>
+
+    <figure class="elements" id="s9">
+      <div class="unnamed-mask"></div>
+      <figcaption class="element-name">Unnamed Mask Batman Face </figcaption>
+    </figure>
+
+    <figure class="elements" id="s10">
+      <div class="leaves"></div>
+      <div class="branch"></div>
+      <figcaption class="element-name">Tree</figcaption>
+    </figure>
+
+    <figure class="elements" id="s11">
+      <div class="dmnd"></div>
+      <figcaption class="element-name">Diamond</figcaption>
+    </figure>
+
+    <figure class="elements" id="s12">
+      <div class="msg-bub"></div>
+      <figcaption class="element-name">Speech Bubble Message Box</figcaption>
+    </figure>
+
+    <figure class="elements" id="s13">
+      <div class="pent"></div>
+      <figcaption class="element-name">Pentagon</figcaption>
+    </figure>
+
+    <figure class="elements" id="s14">
+      <div class="oct"></div>
+      <figcaption class="element-name">Octagon</figcaption>
+    </figure>
+
+    <figure class="elements" id="s15">
+      <div class="hex"></div>
+      <figcaption class="element-name">Hexagon</figcaption>
+    </figure>
+
+    <figure class="elements" id="s16">
+      <div class="apple"></div>
+      <figcaption class="element-name">Apple</figcaption>
+    </figure>
+
+    <figure class="elements" id="s17">
+      <div class="c-moon"></div>
+      <figcaption class="element-name">Crescent Moon</figcaption>
+    </figure>
+
+
+    </div>
+    </span>
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA-pjTYLNGKq-XvAqrgWN_g0-KaCAwraBc",
+    authDomain: "css-creatures.firebaseapp.com",
+    projectId: "css-creatures",
+    storageBucket: "css-creatures.appspot.com",
+    messagingSenderId: "899687287440",
+    appId: "1:899687287440:web:6f0694b0fa51c684e3e615",
+    measurementId: "G-D7H9H1RRJZ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+ 
+  <script>
+
+window.history.pushState(null,null,window.location.href);
+window.onpopstate = function(){
+  window.history.go(1);
+  location.reload(true);
+}
+
+    //************************************** SEARCH FUNCTION ********************************************//
+
+function search_css(){
+
+document.getElementById("search-hide").style.display="none";
+document.getElementById("searchon").style.display="block";
+document.getElementById("plch").style.display="none";
+document.getElementById("body").style.position="absolute";
+document.getElementById("body").style.overflowX="hidden";
+
+ let input = document.getElementById("searchbar").value;
+ input=input.toLowerCase();
+ let x = document.getElementsByClassName("element-name");
+ let y = document.getElementsByClassName("elements");
+
+ for (var i = 0; i < x.length; i++){
+
+  if (!x[i].innerHTML.toLowerCase().includes(input) ) {
+    y[i].style.display="none";
+  }
+
+ else{
+  y[i].style.display="block";
+ }
+
+ }
+
+}
+//************************************** SEARCH FUNCTION ENDS ********************************************//
+
+document.getElementById("view1").addEventListener("click", function(){ 
+  document.getElementById("search-hide").style.display="none";
+document.getElementById("searchon").style.display="block";
+document.getElementById("body").style.position="absolute";
+})
+
+document.getElementById("view2").addEventListener("click", function(){ 
+  document.getElementById("search-hide").style.display="none";
+document.getElementById("searchon").style.display="block";
+document.getElementById("body").style.position="absolute";
+})
+
+     var slidem1 = document.getElementById("motion");
+     var slides1 = document.getElementById("static");
+     var hanimate = document.getElementById("h1");
+     var hanimate2 = document.getElementById("h2");
+     var b1 = document.getElementById("ss1");
+     var b2 = document.getElementById("ss2");
+     var b3 = document.getElementById("ss3");
+     var b4 = document.getElementById("ss4");
+     var b5 = document.getElementById("ss5");
+     var b6 = document.getElementById("ss6");
+     var d1 = document.getElementById("mc1");
+     var d2 = document.getElementById("mc2");
+     var d3 = document.getElementById("mc3");
+     var d4 = document.getElementById("mc4");
+     var d5 = document.getElementById("mc5");
+     var d6 = document.getElementById("mc6");
+     const csscode = document.querySelectorAll(".csscodes2");
+     var admotion1 =  document.getElementById("a1");
+     var admotion2 =  document.getElementById("a2");
+     var admotion8i =  document.getElementById("a8i");
+     var admotion8ii =  document.getElementById("a8ii");
+
+    document.getElementById("motion").addEventListener("click", function(){ 
+        slidem1.classList.add("motion");
+        slides1.classList.add("staticrev");
+        slidem1.classList.remove("motionrev");
+        slides1.classList.remove("static2");
+        hanimate.classList.add("hani2");
+        hanimate.classList.remove("hani");
+        hanimate2.classList.add("hani2");
+        hanimate2.classList.remove("hani");
+        b1.classList.add("scroll-boxstyle");
+        b2.classList.add("scroll-boxstyle");
+        b3.classList.add("scroll-boxstyle");
+        b4.classList.add("scroll-boxstyle");
+        b5.classList.add("scroll-boxstyle");
+        b6.classList.add("scroll-boxstyle");
+        d1.classList.add("scroll-boxstyle");
+        d2.classList.add("scroll-boxstyle");
+        d3.classList.add("scroll-boxstyle");
+        d4.classList.add("scroll-boxstyle");
+        d5.classList.add("scroll-boxstyle");
+        d6.classList.add("scroll-boxstyle");
+
+        csscode.forEach(element => {
+               element.style.display = "block";
+        })
+
+
+       admotion1.classList.add("ad1");
+       admotion2.classList.add("ad2");
+       admotion8i.classList.add("ad8i");
+       admotion8ii.classList.add("ad8ii");
+    })
+
+    document.getElementById("static").addEventListener("click", function(){ 
+        slidem1.classList.remove("motion");
+        slides1.classList.remove("staticrev");
+        slidem1.classList.add("motionrev");
+        slides1.classList.add("static2");
+        hanimate.classList.add("hani");
+        hanimate.classList.remove("hani2");
+        hanimate2.classList.add("hani");
+        hanimate2.classList.remove("hani2");
+        b1.classList.remove("scroll-boxstyle");
+        b2.classList.remove("scroll-boxstyle");
+        b3.classList.remove("scroll-boxstyle");
+        b4.classList.remove("scroll-boxstyle");
+        b5.classList.remove("scroll-boxstyle");
+        b6.classList.remove("scroll-boxstyle");
+        d1.classList.remove("scroll-boxstyle");
+        d2.classList.remove("scroll-boxstyle");
+        d3.classList.remove("scroll-boxstyle");
+        d4.classList.remove("scroll-boxstyle");
+        d5.classList.remove("scroll-boxstyle");
+        d6.classList.remove("scroll-boxstyle");
+
+        csscode.forEach(element => {
+               element.style.display = "none";
+        })
+    
+        admotion1.classList.remove("ad1");
+        admotion2.classList.remove("ad2");
+        admotion8i.classList.remove("ad8i");
+       admotion8ii.classList.remove("ad8ii");
+    })
+
+    //****************************CSS CODES DISPLAY*****************************//
+    document.getElementById("ss1").addEventListener("click", function(){
+        document.getElementById("c1").style.display = "block";
+    })
+    document.getElementById("cross1").addEventListener("click", function(){
+        document.getElementById("c1").style.display = "none";
+    })
+
+    document.getElementById("ss2").addEventListener("click", function(){
+        document.getElementById("c2").style.display = "block";
+    })
+    document.getElementById("cross2").addEventListener("click", function(){
+        document.getElementById("c2").style.display = "none";
+    })
+
+    document.getElementById("ss3").addEventListener("click", function(){
+        document.getElementById("c3").style.display = "block";
+    })
+    document.getElementById("cross3").addEventListener("click", function(){
+        document.getElementById("c3").style.display = "none";
+    })
+
+    document.getElementById("ss4").addEventListener("click", function(){
+        document.getElementById("c4").style.display = "block";
+    })
+    document.getElementById("cross4").addEventListener("click", function(){
+        document.getElementById("c4").style.display = "none";
+    })
+
+    document.getElementById("ss5").addEventListener("click", function(){
+        document.getElementById("c5").style.display = "block";
+    })
+    document.getElementById("cross5").addEventListener("click", function(){
+        document.getElementById("c5").style.display = "none";
+    })
+
+    document.getElementById("ss6").addEventListener("click", function(){
+        document.getElementById("c6").style.display = "block";
+    })
+    document.getElementById("cross6").addEventListener("click", function(){
+        document.getElementById("c6").style.display = "none";
+    })
+
+    document.getElementById("mc1").addEventListener("click", function(){
+        document.getElementById("c7").style.display = "block";
+    })
+    document.getElementById("cross7").addEventListener("click", function(){
+        document.getElementById("c7").style.display = "none";
+    })
+
+    document.getElementById("mc2").addEventListener("click", function(){
+        document.getElementById("c8").style.display = "block";
+    })
+    document.getElementById("cross8").addEventListener("click", function(){
+        document.getElementById("c8").style.display = "none";
+    })
+
+    document.getElementById("mc3").addEventListener("click", function(){
+        document.getElementById("c9").style.display = "block";
+    })
+    document.getElementById("cross9").addEventListener("click", function(){
+        document.getElementById("c9").style.display = "none";
+    })
+
+    document.getElementById("mc4").addEventListener("click", function(){
+        document.getElementById("c10").style.display = "block";
+    })
+    document.getElementById("cross10").addEventListener("click", function(){
+        document.getElementById("c10").style.display = "none";
+    })
+
+    document.getElementById("mc5").addEventListener("click", function(){
+        document.getElementById("c11").style.display = "block";
+    })
+    document.getElementById("cross11").addEventListener("click", function(){
+        document.getElementById("c11").style.display = "none";
+    })
+
+    document.getElementById("mc6").addEventListener("click", function(){
+        document.getElementById("c12").style.display = "block";
+    })
+    document.getElementById("cross12").addEventListener("click", function(){
+        document.getElementById("c12").style.display = "none";
+    })
+
+    //**************************** CSS CODES DISPLAY OF ALL *****************************
+    document.getElementById("s1").addEventListener("click", function(){
+        document.getElementById("c1").style.display = "block";
+    })
+
+    document.getElementById("s2").addEventListener("click", function(){
+        document.getElementById("c3").style.display = "block";
+    })
+
+    document.getElementById("s3").addEventListener("click", function(){
+        document.getElementById("c4").style.display = "block";
+    })
+
+    document.getElementById("s4").addEventListener("click", function(){
+        document.getElementById("c5").style.display = "block";
+    })
+
+    document.getElementById("s5").addEventListener("click", function(){
+        document.getElementById("c6").style.display = "block";
+    })
+
+    document.getElementById("s6").addEventListener("click", function(){
+        document.getElementById("c7").style.display = "block";
+    })
+
+    document.getElementById("s7").addEventListener("click", function(){
+        document.getElementById("c9").style.display = "block";
+    })
+
+    document.getElementById("s8").addEventListener("click", function(){
+        document.getElementById("c10").style.display = "block";
+    })
+
+    document.getElementById("s9").addEventListener("click", function(){
+        document.getElementById("c11").style.display = "block";
+    })
+
+    document.getElementById("s10").addEventListener("click", function(){
+        document.getElementById("c12").style.display = "block";
+    })
+
+    document.getElementById("s11").addEventListener("click", function(){
+        document.getElementById("c13").style.display = "block";
+    })
+    document.getElementById("cross13").addEventListener("click", function(){
+        document.getElementById("c13").style.display = "none";
+    })
+
+    document.getElementById("s12").addEventListener("click", function(){
+        document.getElementById("c14").style.display = "block";
+    })
+    document.getElementById("cross14").addEventListener("click", function(){
+        document.getElementById("c14").style.display = "none";
+    })
+
+    document.getElementById("s13").addEventListener("click", function(){
+        document.getElementById("c15").style.display = "block";
+    })
+    document.getElementById("cross15").addEventListener("click", function(){
+        document.getElementById("c15").style.display = "none";
+    })
+
+    document.getElementById("s14").addEventListener("click", function(){
+        document.getElementById("c16").style.display = "block";
+    })
+    document.getElementById("cross16").addEventListener("click", function(){
+        document.getElementById("c16").style.display = "none";
+    })
+
+    document.getElementById("s15").addEventListener("click", function(){
+        document.getElementById("c17").style.display = "block";
+    })
+    document.getElementById("cross17").addEventListener("click", function(){
+        document.getElementById("c17").style.display = "none";
+    })
+
+    document.getElementById("s16").addEventListener("click", function(){
+        document.getElementById("c18").style.display = "block";
+    })
+    document.getElementById("cross18").addEventListener("click", function(){
+        document.getElementById("c18").style.display = "none";
+    })
+
+    document.getElementById("s17").addEventListener("click", function(){
+        document.getElementById("c19").style.display = "block";
+    })
+    document.getElementById("cross19").addEventListener("click", function(){
+        document.getElementById("c19").style.display = "none";
+    })
+
+  </script>
+
+  </body>
+
+  </html>
